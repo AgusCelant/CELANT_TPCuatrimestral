@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9AED0149-41DF-41FB-A732-0DE753F2EF0A}</ProjectGuid>
+    <ProjectGuid>{72DEFB14-EB37-4C39-808D-D5DCE91EA013}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Presentacion</RootNamespace>
-    <AssemblyName>Presentacion</AssemblyName>
+    <RootNamespace>Negocio</RootNamespace>
+    <AssemblyName>Negocio</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,53 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buscar Turno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Buscar Turno.Designer.cs">
-      <DependentUpon>Buscar Turno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Eliminar Turno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Eliminar Turno.Designer.cs">
-      <DependentUpon>Eliminar Turno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modificar Turno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modificar Turno.Designer.cs">
-      <DependentUpon>Modificar Turno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Nuevo Turno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Nuevo Turno.Designer.cs">
-      <DependentUpon>Nuevo Turno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="DatosPaciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Buscar Turno.resx">
-      <DependentUpon>Buscar Turno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Eliminar Turno.resx">
-      <DependentUpon>Eliminar Turno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modificar Turno.resx">
-      <DependentUpon>Modificar Turno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Nuevo Turno.resx">
-      <DependentUpon>Nuevo Turno.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
