@@ -75,6 +75,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvModificar);
+            this.MinimumSize = new System.Drawing.Size(581, 319);
             this.Name = "Modificat_Turno";
             this.Text = "Modificar_Turno";
             ((System.ComponentModel.ISupportInitialize)(this.dgvModificar)).EndInit();

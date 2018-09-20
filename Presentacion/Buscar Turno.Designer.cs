@@ -47,7 +47,7 @@
             this.dgvBuscarTurno.Location = new System.Drawing.Point(12, 51);
             this.dgvBuscarTurno.MultiSelect = false;
             this.dgvBuscarTurno.Name = "dgvBuscarTurno";
-            this.dgvBuscarTurno.Size = new System.Drawing.Size(776, 387);
+            this.dgvBuscarTurno.Size = new System.Drawing.Size(541, 217);
             this.dgvBuscarTurno.TabIndex = 0;
             // 
             // toolStrip1
@@ -57,7 +57,7 @@
             this.tsbBusquedaTurno});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(565, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -83,11 +83,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(565, 280);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvBuscarTurno);
+            this.MinimumSize = new System.Drawing.Size(581, 319);
             this.Name = "Buscar_Turno";
             this.Text = "Buscar_Turno";
+            this.Load += new System.EventHandler(this.Buscar_Turno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarTurno)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

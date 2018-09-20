@@ -75,6 +75,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvEliminar);
+            this.MinimumSize = new System.Drawing.Size(581, 319);
             this.Name = "Eliminar_Turno";
             this.Text = "Eliminar_Turno";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).EndInit();
