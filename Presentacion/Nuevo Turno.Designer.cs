@@ -216,6 +216,7 @@
             this.Controls.Add(this.btnAceptar);
             this.MinimumSize = new System.Drawing.Size(581, 319);
             this.Name = "Nuevo_Turno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo_Turno";
             this.ResumeLayout(false);
             this.PerformLayout();

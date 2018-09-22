@@ -76,6 +76,12 @@
     <Compile Include="Nuevo Turno.Designer.cs">
       <DependentUpon>Nuevo Turno.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlanillaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanillaPaciente.Designer.cs">
+      <DependentUpon>PlanillaPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Buscar Turno.resx">
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevo Turno.resx">
       <DependentUpon>Nuevo Turno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillaPaciente.resx">
+      <DependentUpon>PlanillaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

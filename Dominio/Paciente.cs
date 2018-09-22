@@ -14,5 +14,7 @@ namespace Dominio
         public int Edad { get; set; }
         public int DNI { get; set; }
         public DateTime Fnac{ get; set; }
+        public int IdObSocial { get; set; }
+        public string ObSocial { get; set; }
     }
 }

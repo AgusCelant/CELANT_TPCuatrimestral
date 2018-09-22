@@ -69,6 +69,7 @@
             this.tsbBuscarDatosPaciente.Name = "tsbBuscarDatosPaciente";
             this.tsbBuscarDatosPaciente.Size = new System.Drawing.Size(23, 22);
             this.tsbBuscarDatosPaciente.Text = "Datos del Paciente";
+            this.tsbBuscarDatosPaciente.Click += new System.EventHandler(this.tsbBuscarDatosPaciente_Click);
             // 
             // tsbBusquedaTurno
             // 
@@ -78,6 +79,7 @@
             this.tsbBusquedaTurno.Name = "tsbBusquedaTurno";
             this.tsbBusquedaTurno.Size = new System.Drawing.Size(23, 22);
             this.tsbBusquedaTurno.Text = "Buscar turno";
+            this.tsbBusquedaTurno.Click += new System.EventHandler(this.tsbBusquedaTurno_Click);
             // 
             // Buscar_Turno
             // 
@@ -88,6 +90,7 @@
             this.Controls.Add(this.dgvBuscarTurno);
             this.MinimumSize = new System.Drawing.Size(581, 319);
             this.Name = "Buscar_Turno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar_Turno";
             this.Load += new System.EventHandler(this.Buscar_Turno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarTurno)).EndInit();

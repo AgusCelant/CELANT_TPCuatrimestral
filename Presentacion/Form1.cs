@@ -21,7 +21,7 @@ namespace Presentacion
         {
 
             Nuevo_Turno turno = new Nuevo_Turno();
-            //turno.MdiParent = this;             COMO HACER QUE SE ABRA SOLO UNA VENTANA EN EL ESPACOP DEL MENU RPINCIPAL
+            //turno.MdiParent = this;            // COMO HACER QUE SE ABRA SOLO UNA VENTANA EN EL ESPACOP DEL MENU RPINCIPAL
             turno.Show();
                      
         }

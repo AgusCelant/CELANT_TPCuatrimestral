@@ -24,18 +24,28 @@ namespace Presentacion
             //BT.MdiParent = this;
             //BT.Show();
 
-            DatosPaciente DP = new DatosPaciente();
+        }
+
+        private void tsbBusquedaTurno_Click(object sender, EventArgs e)
+        {
+            DatosEspecialidad DE = new DatosEspecialidad();
 
             try
             {
-                dgvBuscarTurno.DataSource = DP.listar();
-    
+                dgvBuscarTurno.DataSource = DE.listar();
+
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void tsbBuscarDatosPaciente_Click(object sender, EventArgs e)
+        {
+            PlanillaPaciente planilla = new PlanillaPaciente();
+            planilla.Show();
         }
     }
 }
