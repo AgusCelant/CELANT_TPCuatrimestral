@@ -16,5 +16,6 @@ namespace Dominio
         public DateTime Fnac{ get; set; }
         public int IdObSocial { get; set; }
         public string ObSocial { get; set; }
+        public string Direccion { get; set; }
     }
 }

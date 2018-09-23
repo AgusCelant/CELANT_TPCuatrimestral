@@ -40,6 +40,7 @@ namespace Negocio
                     paciente.Fnac = (DateTime)lector["Fnac"];
                     paciente.IdObSocial = (int)lector["IdObSocial"];
                     paciente.ObSocial = lector.GetString(6);
+                    paciente.Direccion = lector.GetString(8);
 
                     lista.Add(paciente);
                 }

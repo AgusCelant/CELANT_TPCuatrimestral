@@ -8,11 +8,12 @@ namespace Dominio
 {
     public class Turnos
     {
-        Paciente paciente = new Paciente();
-        Medico mmedico = new Medico();
-
+        public Paciente paciente = new Paciente();
+        public Medico mmedico = new Medico();
         
+        public int IdTurno { get; set; }
+        public DateTime fecha { get; set; }
+        public DateTime horario { get; set; }
 
-        
     }
 }

@@ -8,6 +8,9 @@ namespace Dominio
 {
     public class Telefonos : Paciente
     {
+        public Paciente paciente = new Paciente();
 
+        public int IdTelefono { get; set; }
+        public int Telefono { get; set; }
     }
 }
