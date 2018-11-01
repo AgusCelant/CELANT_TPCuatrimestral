@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Eliminar_Turno : Form
+    public partial class frmNuevoTurno : Form
     {
-        public Eliminar_Turno()
+        public frmNuevoTurno()
         {
             InitializeComponent();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

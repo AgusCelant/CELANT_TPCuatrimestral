@@ -46,61 +46,106 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buscar Turno.cs">
+    <Compile Include="AltaMedico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Buscar Turno.Designer.cs">
-      <DependentUpon>Buscar Turno.cs</DependentUpon>
+    <Compile Include="AltaMedico.Designer.cs">
+      <DependentUpon>AltaMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Eliminar Turno.cs">
+    <Compile Include="AltaObSocial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Eliminar Turno.Designer.cs">
-      <DependentUpon>Eliminar Turno.cs</DependentUpon>
+    <Compile Include="AltaObSocial.Designer.cs">
+      <DependentUpon>AltaObSocial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="AltaPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AltaPaciente.Designer.cs">
+      <DependentUpon>AltaPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modificar Turno.cs">
+    <Compile Include="frmListar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modificar Turno.Designer.cs">
-      <DependentUpon>Modificar Turno.cs</DependentUpon>
+    <Compile Include="frmListar.Designer.cs">
+      <DependentUpon>frmListar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nuevo Turno.cs">
+    <Compile Include="frmDireccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nuevo Turno.Designer.cs">
-      <DependentUpon>Nuevo Turno.cs</DependentUpon>
+    <Compile Include="frmDireccion.Designer.cs">
+      <DependentUpon>frmDireccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlanillaPaciente.cs">
+    <Compile Include="frmEliminarTurno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlanillaPaciente.Designer.cs">
-      <DependentUpon>PlanillaPaciente.cs</DependentUpon>
+    <Compile Include="frmEliminarTurno.Designer.cs">
+      <DependentUpon>frmEliminarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarTurno.Designer.cs">
+      <DependentUpon>frmModificarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoTurno.Designer.cs">
+      <DependentUpon>frmNuevoTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlanillaMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanillaMedicos.Designer.cs">
+      <DependentUpon>frmPlanillaMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlanillaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanillaPaciente.Designer.cs">
+      <DependentUpon>frmPlanillaPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Buscar Turno.resx">
-      <DependentUpon>Buscar Turno.cs</DependentUpon>
+    <EmbeddedResource Include="AltaMedico.resx">
+      <DependentUpon>AltaMedico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Eliminar Turno.resx">
-      <DependentUpon>Eliminar Turno.cs</DependentUpon>
+    <EmbeddedResource Include="AltaObSocial.resx">
+      <DependentUpon>AltaObSocial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AltaPaciente.resx">
+      <DependentUpon>AltaPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modificar Turno.resx">
-      <DependentUpon>Modificar Turno.cs</DependentUpon>
+    <EmbeddedResource Include="frmListar.resx">
+      <DependentUpon>frmListar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nuevo Turno.resx">
-      <DependentUpon>Nuevo Turno.cs</DependentUpon>
+    <EmbeddedResource Include="frmDireccion.resx">
+      <DependentUpon>frmDireccion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlanillaPaciente.resx">
-      <DependentUpon>PlanillaPaciente.cs</DependentUpon>
+    <EmbeddedResource Include="frmEliminarTurno.resx">
+      <DependentUpon>frmEliminarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarTurno.resx">
+      <DependentUpon>frmModificarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoTurno.resx">
+      <DependentUpon>frmNuevoTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlanillaMedicos.resx">
+      <DependentUpon>frmPlanillaMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlanillaPaciente.resx">
+      <DependentUpon>frmPlanillaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

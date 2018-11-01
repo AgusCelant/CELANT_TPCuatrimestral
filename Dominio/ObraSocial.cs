@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Telefonos : Paciente
+    public class ObraSocial
     {
-        public Paciente paciente = new Paciente();
-
-        public int IdTelefono { get; set; }
+        public int IdOS { get; set; }
+        public string OS { get; set; }
         public int Telefono { get; set; }
+        public string Mail { get; set; }
+        
     }
 }

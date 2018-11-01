@@ -11,9 +11,9 @@ using Negocio;
 
 namespace Presentacion
 {
-    public partial class Buscar_Turno : Form
+    public partial class frmListar : Form
     {
-        public Buscar_Turno()
+        public frmListar()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace Presentacion
 
             try
             {
-                dgvBuscarTurno.DataSource = DE.listar();
+                dgvBuscar.DataSource = DE.listar();
 
             }
             catch (Exception ex)
@@ -44,8 +44,30 @@ namespace Presentacion
 
         private void tsbBuscarDatosPaciente_Click(object sender, EventArgs e)
         {
-            PlanillaPaciente planilla = new PlanillaPaciente();
+            frmPlanillaPaciente planilla = new frmPlanillaPaciente();
             planilla.Show();
+        }
+
+        private void tsbBuscarMedicos_Click(object sender, EventArgs e)
+        {
+            frmPlanillaMedicos planilla = new frmPlanillaMedicos();
+            planilla.Show();
+        }
+
+        private void tsbListarOS_Click(object sender, EventArgs e)
+        {
+            DatosOS OS = new DatosOS();
+
+            try
+            {
+
+            dgvBuscar.DataSource = OS.listarOS();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

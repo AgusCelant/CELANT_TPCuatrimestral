@@ -11,11 +11,20 @@ namespace Dominio
         public int IdPaciente { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int Edad { get; set; }
         public int DNI { get; set; }
         public DateTime Fnac{ get; set; }
-        public int IdObSocial { get; set; }
-        public string ObSocial { get; set; }
-        public string Direccion { get; set; }
+        public int Nafiliado { get; set; }
+        public ObraSocial OS;
+        public Direccion direccion { get; set; }
+        public string OBS { get; set; }
+        public string Calle { get; set; }
+        public int Numero { get; set; }
+        public string CPostal { get; set; }
+        public string Descripcion { get; set; }
+
+        public Paciente() {
+            this.direccion = new Direccion();
+            this.OS = new ObraSocial();
+        }
     }
 }

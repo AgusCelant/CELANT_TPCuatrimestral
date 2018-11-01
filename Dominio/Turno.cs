@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Turnos
+    public class Turno
     {
         public Paciente paciente = new Paciente();
         public Medico mmedico = new Medico();

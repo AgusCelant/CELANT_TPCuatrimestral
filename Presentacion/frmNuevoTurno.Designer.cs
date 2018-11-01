@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class Nuevo_Turno
+    partial class frmNuevoTurno
     {
         /// <summary>
         /// Required designer variable.
@@ -40,40 +40,43 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.lblFechaNac = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cbOS = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Location = new System.Drawing.Point(397, 304);
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAceptar.Location = new System.Drawing.Point(726, 245);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 1;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(478, 304);
+            this.btnCancelar.Location = new System.Drawing.Point(807, 245);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(26, 42);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(60, 16);
+            this.lblNombre.Size = new System.Drawing.Size(69, 18);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -89,10 +92,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Menu;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(26, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 16);
+            this.label1.Size = new System.Drawing.Size(72, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Apellido:";
             // 
@@ -100,10 +104,11 @@
             // 
             this.lblEdad.AutoSize = true;
             this.lblEdad.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(26, 118);
+            this.lblEdad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdad.Location = new System.Drawing.Point(323, 41);
             this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(44, 16);
+            this.lblEdad.Size = new System.Drawing.Size(51, 18);
             this.lblEdad.TabIndex = 6;
             this.lblEdad.Text = "Edad:";
             // 
@@ -111,9 +116,11 @@
             // 
             this.lblDNI.AutoSize = true;
             this.lblDNI.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblDNI.Location = new System.Drawing.Point(26, 158);
+            this.lblDNI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNI.Location = new System.Drawing.Point(323, 81);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(29, 13);
+            this.lblDNI.Size = new System.Drawing.Size(40, 18);
             this.lblDNI.TabIndex = 7;
             this.lblDNI.Text = "DNI:";
             // 
@@ -121,10 +128,11 @@
             // 
             this.lblObraSocial.AutoSize = true;
             this.lblObraSocial.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObraSocial.Location = new System.Drawing.Point(26, 230);
+            this.lblObraSocial.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObraSocial.Location = new System.Drawing.Point(26, 134);
             this.lblObraSocial.Name = "lblObraSocial";
-            this.lblObraSocial.Size = new System.Drawing.Size(99, 16);
+            this.lblObraSocial.Size = new System.Drawing.Size(116, 18);
             this.lblObraSocial.TabIndex = 8;
             this.lblObraSocial.Text = "N° Obra Social:";
             // 
@@ -132,16 +140,17 @@
             // 
             this.lblNombreObraSocial.AutoSize = true;
             this.lblNombreObraSocial.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblNombreObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreObraSocial.Location = new System.Drawing.Point(26, 266);
+            this.lblNombreObraSocial.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombreObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreObraSocial.Location = new System.Drawing.Point(354, 136);
             this.lblNombreObraSocial.Name = "lblNombreObraSocial";
-            this.lblNombreObraSocial.Size = new System.Drawing.Size(82, 16);
+            this.lblNombreObraSocial.Size = new System.Drawing.Size(96, 18);
             this.lblNombreObraSocial.TabIndex = 9;
             this.lblNombreObraSocial.Text = "Obra Social:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 151);
+            this.textBox1.Location = new System.Drawing.Point(390, 74);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 10;
@@ -156,21 +165,14 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(93, 114);
+            this.textBox3.Location = new System.Drawing.Point(390, 37);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(180, 20);
             this.textBox3.TabIndex = 12;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(126, 262);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 20);
-            this.textBox4.TabIndex = 13;
-            // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(126, 226);
+            this.textBox5.Location = new System.Drawing.Point(148, 134);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(180, 20);
             this.textBox5.TabIndex = 14;
@@ -179,29 +181,38 @@
             // 
             this.lblFechaNac.AutoSize = true;
             this.lblFechaNac.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNac.Location = new System.Drawing.Point(26, 194);
+            this.lblFechaNac.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNac.Location = new System.Drawing.Point(600, 38);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(139, 16);
+            this.lblFechaNac.Size = new System.Drawing.Size(161, 18);
             this.lblFechaNac.TabIndex = 15;
             this.lblFechaNac.Text = "Fecha de Nacimiento:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(166, 190);
+            this.dateTimePicker1.Location = new System.Drawing.Point(652, 71);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 16;
+            // 
+            // cbOS
+            // 
+            this.cbOS.FormattingEnabled = true;
+            this.cbOS.Location = new System.Drawing.Point(457, 132);
+            this.cbOS.Name = "cbOS";
+            this.cbOS.Size = new System.Drawing.Size(121, 21);
+            this.cbOS.TabIndex = 17;
             // 
             // Nuevo_Turno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 339);
+            this.ClientSize = new System.Drawing.Size(894, 280);
+            this.Controls.Add(this.cbOS);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblFechaNac);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.textBox1);
@@ -236,9 +247,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label lblFechaNac;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cbOS;
     }
 }

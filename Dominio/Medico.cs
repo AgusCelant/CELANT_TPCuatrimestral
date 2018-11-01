@@ -11,9 +11,12 @@ namespace Dominio
         public int IdMedico { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int IdEspecialidad { get; set; }
-        public string Especialidad { get; set; }
-        public int IdObSocial { get; set; }
-        public string ObSocial { get; set; }
+        public int Edad { get; set; }
+        public DateTime Fnac { get; set; }
+        public int Nmatricula { get; set; }
+        public List<Especialidad> Especialidades;
+        public ObraSocial OS;
+ 
+        //CAMBIAR EL OBRASOCIAL POR LIST<OBRASOCIAL>
     }
 }

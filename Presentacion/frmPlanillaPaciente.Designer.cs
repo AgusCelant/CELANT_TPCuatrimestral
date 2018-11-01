@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class PlanillaPaciente
+    partial class frmPlanillaPaciente
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvPlanillaPacientes = new System.Windows.Forms.DataGridView();
+            this.btnModificarPaciente = new System.Windows.Forms.Button();
+            this.btnEliminarPaciente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,14 +44,39 @@
             this.dgvPlanillaPacientes.Location = new System.Drawing.Point(12, 10);
             this.dgvPlanillaPacientes.MultiSelect = false;
             this.dgvPlanillaPacientes.Name = "dgvPlanillaPacientes";
-            this.dgvPlanillaPacientes.Size = new System.Drawing.Size(947, 426);
+            this.dgvPlanillaPacientes.Size = new System.Drawing.Size(1257, 381);
             this.dgvPlanillaPacientes.TabIndex = 0;
+            // 
+            // btnModificarPaciente
+            // 
+            this.btnModificarPaciente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarPaciente.BackColor = System.Drawing.SystemColors.Control;
+            this.btnModificarPaciente.Location = new System.Drawing.Point(1053, 397);
+            this.btnModificarPaciente.Name = "btnModificarPaciente";
+            this.btnModificarPaciente.Size = new System.Drawing.Size(105, 48);
+            this.btnModificarPaciente.TabIndex = 4;
+            this.btnModificarPaciente.Text = "Modificar";
+            this.btnModificarPaciente.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminarPaciente
+            // 
+            this.btnEliminarPaciente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarPaciente.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEliminarPaciente.Location = new System.Drawing.Point(1164, 397);
+            this.btnEliminarPaciente.Name = "btnEliminarPaciente";
+            this.btnEliminarPaciente.Size = new System.Drawing.Size(105, 48);
+            this.btnEliminarPaciente.TabIndex = 3;
+            this.btnEliminarPaciente.Text = "Eliminar";
+            this.btnEliminarPaciente.UseVisualStyleBackColor = false;
+            this.btnEliminarPaciente.Click += new System.EventHandler(this.btnEliminarPaciente_Click);
             // 
             // PlanillaPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 448);
+            this.ClientSize = new System.Drawing.Size(1281, 448);
+            this.Controls.Add(this.btnModificarPaciente);
+            this.Controls.Add(this.btnEliminarPaciente);
             this.Controls.Add(this.dgvPlanillaPacientes);
             this.Name = "PlanillaPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -63,5 +90,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPlanillaPacientes;
+        private System.Windows.Forms.Button btnModificarPaciente;
+        private System.Windows.Forms.Button btnEliminarPaciente;
     }
 }

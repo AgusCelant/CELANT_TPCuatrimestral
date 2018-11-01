@@ -10,13 +10,13 @@ namespace Negocio
 {
     public class DatosEspecialidad
     {
-        public IList<Especialidades> listar()
+        public IList<Especialidad> listar()
         {
             SqlConnection conexion = new SqlConnection();
-        SqlCommand comando = new SqlCommand();
-        SqlDataReader lector;
-        IList<Especialidades> lista = new List<Especialidades>();
-        Especialidades aux;
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            IList<Especialidad> lista = new List<Especialidad>();
+            Especialidad aux;
 
             try
             {
@@ -30,8 +30,8 @@ namespace Negocio
                 while (lector.Read())
                 {                            //LUEGO DE LA CONEXION HAY QUE HACER EL WHILE PARA
                                              //IR LEYENDO LOS DATOS DE LA TABLA
-                    aux = new Especialidades();
-                     aux.DescEspecialidad = lector.GetString(1);
+                    aux = new Especialidad();
+                    aux.DescEspecialidad = lector.GetString(1);
                     aux.IdEspecialidad = (int) lector["IdEspecialidad"];
 
                 lista.Add(aux);                              //POR ULTIMO AGREGAR SIEMPRE EL .ADD(AUX) PARA QUE LO QUE SE LEYO
