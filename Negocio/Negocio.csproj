@@ -50,13 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDB.cs" />
+    <Compile Include="DatosDias.cs" />
+    <Compile Include="DatosDiasXMedico.cs" />
     <Compile Include="DatosDireccion.cs" />
     <Compile Include="DatosEspecialidad.cs" />
     <Compile Include="DatosEspecialidadXMedico.cs" />
     <Compile Include="DatosLocalidad.cs" />
     <Compile Include="DatosMedicos.cs" />
     <Compile Include="DatosOS.cs" />
+    <Compile Include="DatosOSxMedico.cs" />
     <Compile Include="DatosPaciente.cs" />
+    <Compile Include="DatosHorasXDias.cs" />
+    <Compile Include="DatosTurno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -32,7 +32,7 @@
             this.dgvBuscar = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbBuscarDatosPaciente = new System.Windows.Forms.ToolStripButton();
-            this.tsbBusquedaTurno = new System.Windows.Forms.ToolStripButton();
+            this.tsbVerEspecialidades = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscarMedicos = new System.Windows.Forms.ToolStripButton();
             this.tsbListarOS = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -59,12 +59,12 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbBuscarDatosPaciente,
-            this.tsbBusquedaTurno,
+            this.tsbVerEspecialidades,
             this.tsbBuscarMedicos,
             this.tsbListarOS});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(24, 280);
+            this.toolStrip1.Size = new System.Drawing.Size(32, 280);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -74,19 +74,19 @@
             this.tsbBuscarDatosPaciente.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarDatosPaciente.Image")));
             this.tsbBuscarDatosPaciente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBuscarDatosPaciente.Name = "tsbBuscarDatosPaciente";
-            this.tsbBuscarDatosPaciente.Size = new System.Drawing.Size(21, 20);
+            this.tsbBuscarDatosPaciente.Size = new System.Drawing.Size(29, 20);
             this.tsbBuscarDatosPaciente.Text = "Datos del Paciente";
             this.tsbBuscarDatosPaciente.Click += new System.EventHandler(this.tsbBuscarDatosPaciente_Click);
             // 
-            // tsbBusquedaTurno
+            // tsbVerEspecialidades
             // 
-            this.tsbBusquedaTurno.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbBusquedaTurno.Image = ((System.Drawing.Image)(resources.GetObject("tsbBusquedaTurno.Image")));
-            this.tsbBusquedaTurno.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBusquedaTurno.Name = "tsbBusquedaTurno";
-            this.tsbBusquedaTurno.Size = new System.Drawing.Size(21, 20);
-            this.tsbBusquedaTurno.Text = "Buscar turno";
-            this.tsbBusquedaTurno.Click += new System.EventHandler(this.tsbBusquedaTurno_Click);
+            this.tsbVerEspecialidades.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbVerEspecialidades.Image = ((System.Drawing.Image)(resources.GetObject("tsbVerEspecialidades.Image")));
+            this.tsbVerEspecialidades.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbVerEspecialidades.Name = "tsbVerEspecialidades";
+            this.tsbVerEspecialidades.Size = new System.Drawing.Size(29, 20);
+            this.tsbVerEspecialidades.Text = "Ver Especialidades";
+            this.tsbVerEspecialidades.Click += new System.EventHandler(this.tsbVerEspecialidades_Click);
             // 
             // tsbBuscarMedicos
             // 
@@ -94,7 +94,7 @@
             this.tsbBuscarMedicos.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarMedicos.Image")));
             this.tsbBuscarMedicos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBuscarMedicos.Name = "tsbBuscarMedicos";
-            this.tsbBuscarMedicos.Size = new System.Drawing.Size(21, 20);
+            this.tsbBuscarMedicos.Size = new System.Drawing.Size(29, 20);
             this.tsbBuscarMedicos.Text = "Buscar Medico";
             this.tsbBuscarMedicos.Click += new System.EventHandler(this.tsbBuscarMedicos_Click);
             // 
@@ -104,7 +104,7 @@
             this.tsbListarOS.Image = ((System.Drawing.Image)(resources.GetObject("tsbListarOS.Image")));
             this.tsbListarOS.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbListarOS.Name = "tsbListarOS";
-            this.tsbListarOS.Size = new System.Drawing.Size(21, 20);
+            this.tsbListarOS.Size = new System.Drawing.Size(29, 20);
             this.tsbListarOS.Text = "Obras Sociales";
             this.tsbListarOS.Click += new System.EventHandler(this.tsbListarOS_Click);
             // 
@@ -130,7 +130,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // Busqueda
+            // frmListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,10 +140,10 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvBuscar);
             this.MinimumSize = new System.Drawing.Size(581, 319);
-            this.Name = "Busqueda";
+            this.Name = "frmListar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar...";
-            this.Load += new System.EventHandler(this.Buscar_Turno_Load);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -157,7 +157,7 @@
         private System.Windows.Forms.DataGridView dgvBuscar;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbBuscarDatosPaciente;
-        private System.Windows.Forms.ToolStripButton tsbBusquedaTurno;
+        private System.Windows.Forms.ToolStripButton tsbVerEspecialidades;
         private System.Windows.Forms.ToolStripButton tsbBuscarMedicos;
         private System.Windows.Forms.ToolStripButton tsbListarOS;
         private System.Windows.Forms.Button btnModificar;

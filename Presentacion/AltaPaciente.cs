@@ -70,7 +70,6 @@ namespace Presentacion
                 nuevo.DNI = int.Parse(txtDNI.Text);
                 nuevo.Fnac = dtpPaciente.Value;
                 nuevo.Nafiliado = int.Parse(txtNumeroOS.Text);
-                //ARREGLAR EL IDDIRECCION QUE TRAE 0 !!!
                 nuevo.direccion = direccionAux;
 
                 nuevo.OS.OS = cboOS.Text;

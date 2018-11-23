@@ -15,8 +15,8 @@ namespace Dominio
         public DateTime Fnac { get; set; }
         public int Nmatricula { get; set; }
         public List<Especialidad> Especialidades;
-        public ObraSocial OS;
- 
-        //CAMBIAR EL OBRASOCIAL POR LIST<OBRASOCIAL>
+        public List<ObraSocial> OS;
+        public List<Dia> Dia;
+        public List<TurnoHorario> TH;
     }
 }

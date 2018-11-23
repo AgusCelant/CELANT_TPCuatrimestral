@@ -89,10 +89,6 @@ namespace Negocio
                 conexion.abrir();
                 nuevo.direccion.Id = conexion.ejecutarAccionReturn();
                 
-                //antes de dar de alta el cliente, haces un select max(iddireccion) from direcciones
-                //COMO GUARDAR EL MAX EN UNA VARIABLE
-                //conexion.setearConsulta("SELECT MAX(IDDIRECCION) FROM DIRECCIONES");
-
                 int IdDireccion = nuevo.direccion.Id;
 
                 conexion.setearConsulta("INSERT INTO PACIENTE(NOMBRE, APELLIDO, DOCUMENTO, FNAC, IDOBSOCIAL, NROAFILIADO, IDDIRECCION) VALUES" +
@@ -137,5 +133,30 @@ namespace Negocio
             }
 
         }
+
+
+        public int BuscarIDPaciente(int DNI)
+        {
+            AccesoDB conexion = new AccesoDB();
+
+            int ID;
+            try
+            {
+
+                conexion.setearConsulta("SELECT IDPACIENTE FROM PACIENTE WHERE DOCUMENTO = " + DNI);
+                
+                conexion.abrir();
+
+                ID = conexion.ejecutarAccionReturn();
+
+                return ID;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        
     }
 }

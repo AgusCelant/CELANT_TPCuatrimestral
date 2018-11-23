@@ -47,7 +47,8 @@ namespace Negocio
             }
         }
         //FUNCION PARA DAR DE ALTA OBRA SOCIAL
-        public void AltaOS(ObraSocial nuevo) {
+        public void AltaOS(ObraSocial nuevo)
+        {
             AccesoDB conexion = null;
 
             try
@@ -72,6 +73,68 @@ namespace Negocio
                 {
                     conexion.cerrar();
                 }
+            }
+        }
+
+        public IList<ObraSocial> ListarXmedico(int ID)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            IList<ObraSocial> lista = new List<ObraSocial>();
+            ObraSocial aux;
+
+            try
+            {
+                conexion.ConnectionString = @"initial catalog=CLINICA; data source=DESKTOP-2IGJU5O\SQLEXPRESS; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT OS.NOMBRE FROM OBRASOCIAL AS os " +
+                    "INNER JOIN OSxMEDICO AS OSM ON OS.IDOS = OSM.IDOBS " +
+                    "WHERE OSM.IDMED =" + ID;
+                comando.Connection = conexion;
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    aux = new ObraSocial();
+
+                    aux.OS = lector.GetString(0);
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                lector = null;
+                conexion.Close();
+            }
+        }
+
+        public int BuscarIDOS(string OBS)
+        {
+            AccesoDB conexion = new AccesoDB();
+
+            int ID;
+            try
+            {
+                conexion.setearConsulta("SELECT IDOS FROM OBRASOCIAL WHERE NOMBRE = " + "'" + OBS + "'");
+
+                conexion.abrir();
+
+                ID = conexion.ejecutarAccionReturn();
+
+                return ID;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

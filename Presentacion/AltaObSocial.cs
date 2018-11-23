@@ -18,9 +18,7 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-
-        private ObraSocial obs = null;
-
+        
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
@@ -39,7 +37,7 @@ namespace Presentacion
                 OS.AltaOS(nuevo);
                 Close();
 
-                MessageBox.Show("Obra Social cargada.");
+                MessageBox.Show("OBRA SOCIAL AGREGADA CON EXITO.");
             }
             catch (Exception ex)
             {

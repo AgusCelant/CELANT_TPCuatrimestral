@@ -7,21 +7,23 @@ using Dominio;
 
 namespace Negocio
 {
-    public class DatosEspecialidadXMedico
+    public class DatosDiasXMedico
     {
-        public void AltaEspecialidadXMedico(Medico nuevoMedico, Especialidad nuevaEspecialidad)
+        public void AltaDiaXMedico(Medico nuevoMedico, Dia nuevoDia)
         {
             AccesoDB conexion = null;
+
             try
             {
                 conexion = new AccesoDB();
-                 conexion.setearConsulta("insert into ESPECIALIDADXMEDICO(IDMED, IDESP) values(@IDMED, @IDESP)");
+                conexion.setearConsulta("insert into DIASXMEDICO(IDMED, IDDIA) values(@IDMED, @IDDIA)");
                 conexion.Comando.Parameters.Clear();
                 conexion.Comando.Parameters.AddWithValue("@IDMED", nuevoMedico.IdMedico);
-                conexion.Comando.Parameters.AddWithValue("@IDESP", nuevaEspecialidad.IdEspecialidad);
+                conexion.Comando.Parameters.AddWithValue("@IDDIA", nuevoDia.IdDay);
 
                 conexion.abrir();
                 conexion.ejecutarAccion();
+
             }
             catch (Exception ex)
             {
@@ -35,8 +37,6 @@ namespace Negocio
                     conexion.cerrar();
                 }
             }
-            
         }
-        
     }
 }

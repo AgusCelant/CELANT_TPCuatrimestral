@@ -17,16 +17,8 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-
-        private void Buscar_Turno_Load(object sender, EventArgs e)
-        {
-            //Buscar_Turno BT = new Buscar_Turno();         --> PREGUNTAR COMO SE HACE PARA QUE LA VENTANA QUEDE DENTRO DEL DGV
-            //BT.MdiParent = this;
-            //BT.Show();
-
-        }
-
-        private void tsbBusquedaTurno_Click(object sender, EventArgs e)
+        
+        private void tsbVerEspecialidades_Click(object sender, EventArgs e)
         {
             DatosEspecialidad DE = new DatosEspecialidad();
 
@@ -71,3 +63,6 @@ namespace Presentacion
         }
     }
 }
+
+
+        //HACER LOS ELIMINAR Y MODIFICAR!!!

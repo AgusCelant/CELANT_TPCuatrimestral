@@ -67,5 +67,12 @@ namespace Presentacion
             Alta.MdiParent = this;
             Alta.Show();
         }
+
+        private void especialidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaEsecialidad Alta = new AltaEsecialidad();
+            Alta.MdiParent = this;
+            Alta.Show();
+        }
     }
 }

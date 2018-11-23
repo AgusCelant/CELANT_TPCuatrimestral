@@ -100,5 +100,18 @@ namespace Negocio
             }
         }
 
+        public string ejecutarAccionReturnSTRING()
+        {
+            try
+            {
+                comando.Connection = conexion;
+                return (string)comando.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

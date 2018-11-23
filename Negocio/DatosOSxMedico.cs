@@ -7,36 +7,35 @@ using Dominio;
 
 namespace Negocio
 {
-    public class DatosEspecialidadXMedico
+    public class DatosOSxMedico
     {
-        public void AltaEspecialidadXMedico(Medico nuevoMedico, Especialidad nuevaEspecialidad)
+        public void AltaOSxMedico(Medico NuevoMedico, ObraSocial NuevaOS)
         {
             AccesoDB conexion = null;
+
             try
             {
                 conexion = new AccesoDB();
-                 conexion.setearConsulta("insert into ESPECIALIDADXMEDICO(IDMED, IDESP) values(@IDMED, @IDESP)");
+                conexion.setearConsulta("INSERT INTO OSxMEDICO(IDOBS, IDMED) VALUES(@IDOBS, @IDMED)");
                 conexion.Comando.Parameters.Clear();
-                conexion.Comando.Parameters.AddWithValue("@IDMED", nuevoMedico.IdMedico);
-                conexion.Comando.Parameters.AddWithValue("@IDESP", nuevaEspecialidad.IdEspecialidad);
+                conexion.Comando.Parameters.AddWithValue("@IDOBS", NuevaOS.IdOS);
+                conexion.Comando.Parameters.AddWithValue("@IDMED", NuevoMedico.IdMedico);
 
                 conexion.abrir();
                 conexion.ejecutarAccion();
+
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
-            finally
-            {
+            finally {
                 if (conexion != null)
                 {
                     conexion.cerrar();
                 }
             }
-            
         }
-        
     }
 }

@@ -22,6 +22,8 @@ namespace Dominio
         public string CPostal { get; set; }
         public string Descripcion { get; set; }
 
+        //AGREGAR TELEFONO
+
         public Paciente() {
             this.direccion = new Direccion();
             this.OS = new ObraSocial();

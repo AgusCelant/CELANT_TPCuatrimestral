@@ -15,11 +15,6 @@ namespace Presentacion
 {
     public partial class frmDireccion : Form
     {
-        //public string calle { get; set; }
-        //public int numero { get; set; }
-        //public Localidades localidad { get; set; }
-        //public string cp { get; set; }
-        
         public frmDireccion()
         {
             InitializeComponent();
@@ -42,12 +37,7 @@ namespace Presentacion
             direccion.Calle = txtCalle.Text;
             direccion.Numero = int.Parse(txtNumero.Text);
             direccion.Localidad = (Localidad)cboLocalidad.SelectedItem;
-
-            //this.calle = txtCalle.Text.Trim();
-            //this.numero = int.Parse(txtNumero.Text);
-            //this.localidad = new Localidades();
-            //this.localidad.Descripcion = cboLocalidad.SelectedItem.ToString();
-            //this.cp = localidad.CPostal;
+            
             Close();
         }
         
