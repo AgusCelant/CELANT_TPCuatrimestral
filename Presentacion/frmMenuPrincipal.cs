@@ -70,7 +70,7 @@ namespace Presentacion
 
         private void especialidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AltaEsecialidad Alta = new AltaEsecialidad();
+            AltaEspecialidad Alta = new AltaEspecialidad();
             Alta.MdiParent = this;
             Alta.Show();
         }

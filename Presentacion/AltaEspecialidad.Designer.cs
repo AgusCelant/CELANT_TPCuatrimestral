@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class AltaEsecialidad
+    partial class AltaEspecialidad
     {
         /// <summary>
         /// Required designer variable.
@@ -32,11 +32,14 @@
             this.lblNombreEspecialidad = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.gbxAltaEspecialidad = new System.Windows.Forms.GroupBox();
+            this.gbxAltaEspecialidad.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNombreEspecialidad
             // 
-            this.txtNombreEspecialidad.Location = new System.Drawing.Point(131, 32);
+            this.txtNombreEspecialidad.Location = new System.Drawing.Point(125, 27);
             this.txtNombreEspecialidad.Name = "txtNombreEspecialidad";
             this.txtNombreEspecialidad.Size = new System.Drawing.Size(170, 20);
             this.txtNombreEspecialidad.TabIndex = 8;
@@ -46,7 +49,7 @@
             this.lblNombreEspecialidad.AutoSize = true;
             this.lblNombreEspecialidad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblNombreEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEspecialidad.Location = new System.Drawing.Point(12, 34);
+            this.lblNombreEspecialidad.Location = new System.Drawing.Point(6, 29);
             this.lblNombreEspecialidad.Name = "lblNombreEspecialidad";
             this.lblNombreEspecialidad.Size = new System.Drawing.Size(106, 18);
             this.lblNombreEspecialidad.TabIndex = 7;
@@ -55,7 +58,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(180, 100);
+            this.btnCancelar.Location = new System.Drawing.Point(232, 100);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 10;
@@ -66,7 +69,7 @@
             // btnAlta
             // 
             this.btnAlta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAlta.Location = new System.Drawing.Point(55, 100);
+            this.btnAlta.Location = new System.Drawing.Point(151, 100);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(75, 23);
             this.btnAlta.TabIndex = 9;
@@ -74,19 +77,41 @@
             this.btnAlta.UseVisualStyleBackColor = true;
             this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
-            // AltaEsecialidad
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Location = new System.Drawing.Point(70, 100);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 11;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // gbxAltaEspecialidad
+            // 
+            this.gbxAltaEspecialidad.Controls.Add(this.txtNombreEspecialidad);
+            this.gbxAltaEspecialidad.Controls.Add(this.lblNombreEspecialidad);
+            this.gbxAltaEspecialidad.Location = new System.Drawing.Point(12, 12);
+            this.gbxAltaEspecialidad.Name = "gbxAltaEspecialidad";
+            this.gbxAltaEspecialidad.Size = new System.Drawing.Size(339, 82);
+            this.gbxAltaEspecialidad.TabIndex = 12;
+            this.gbxAltaEspecialidad.TabStop = false;
+            this.gbxAltaEspecialidad.Text = "Datos Especialidad";
+            // 
+            // AltaEspecialidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 135);
+            this.ClientSize = new System.Drawing.Size(363, 135);
+            this.Controls.Add(this.gbxAltaEspecialidad);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlta);
-            this.Controls.Add(this.txtNombreEspecialidad);
-            this.Controls.Add(this.lblNombreEspecialidad);
-            this.Name = "AltaEsecialidad";
+            this.Name = "AltaEspecialidad";
             this.Text = "AltaEsecialidad";
+            this.gbxAltaEspecialidad.ResumeLayout(false);
+            this.gbxAltaEspecialidad.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -96,5 +121,7 @@
         private System.Windows.Forms.Label lblNombreEspecialidad;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlta;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.GroupBox gbxAltaEspecialidad;
     }
 }

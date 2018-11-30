@@ -144,5 +144,47 @@ namespace Negocio
                 }
             }
         }
+
+        public void EliminarEspecialidad(int ID)
+        {
+            AccesoDB conexion = new AccesoDB();
+
+            try
+            {
+                conexion = new AccesoDB();
+                conexion.setearConsulta(" DELETE FROM ESPECIALIDADES WHERE IDESPECIALIDAD = @ID");
+                conexion.Comando.Parameters.Clear();
+                conexion.Comando.Parameters.AddWithValue("@Id", ID);
+                conexion.abrir();
+                conexion.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void ModificarEspecialidad(Especialidad E)
+        {
+            AccesoDB conexion = new AccesoDB();
+            
+            try
+            {
+                conexion.setearConsulta("UPDATE ESPECIALIDADES SET DESCRIPCION = @DESCRIPCION WHERE IDESPECIALIDAD = "+ E.IdEspecialidad);
+                conexion.Comando.Parameters.Clear();
+                conexion.Comando.Parameters.AddWithValue("@DESCRIPCION", E.DescEspecialidad);
+
+                conexion.abrir();
+                conexion.ejecutarAccion();
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
     }
 }

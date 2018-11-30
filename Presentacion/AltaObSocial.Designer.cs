@@ -36,6 +36,8 @@
             this.lblMail = new System.Windows.Forms.Label();
             this.txtTelefonoOS = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
+            this.gbxAltaObraSocial = new System.Windows.Forms.GroupBox();
+            this.gbxAltaObraSocial.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombreOS
@@ -43,7 +45,7 @@
             this.lblNombreOS.AutoSize = true;
             this.lblNombreOS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblNombreOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreOS.Location = new System.Drawing.Point(12, 27);
+            this.lblNombreOS.Location = new System.Drawing.Point(28, 21);
             this.lblNombreOS.Name = "lblNombreOS";
             this.lblNombreOS.Size = new System.Drawing.Size(96, 18);
             this.lblNombreOS.TabIndex = 0;
@@ -52,7 +54,7 @@
             // btnAlta
             // 
             this.btnAlta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAlta.Location = new System.Drawing.Point(416, 97);
+            this.btnAlta.Location = new System.Drawing.Point(404, 138);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(75, 23);
             this.btnAlta.TabIndex = 4;
@@ -63,7 +65,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(541, 97);
+            this.btnCancelar.Location = new System.Drawing.Point(534, 138);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -73,14 +75,14 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(131, 25);
+            this.txtNombre.Location = new System.Drawing.Point(147, 19);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(170, 20);
             this.txtNombre.TabIndex = 6;
             // 
             // txtCorreoOS
             // 
-            this.txtCorreoOS.Location = new System.Drawing.Point(131, 75);
+            this.txtCorreoOS.Location = new System.Drawing.Point(147, 69);
             this.txtCorreoOS.Name = "txtCorreoOS";
             this.txtCorreoOS.Size = new System.Drawing.Size(170, 20);
             this.txtCorreoOS.TabIndex = 10;
@@ -90,7 +92,7 @@
             this.lblMail.AutoSize = true;
             this.lblMail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMail.Location = new System.Drawing.Point(64, 77);
+            this.lblMail.Location = new System.Drawing.Point(80, 71);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(61, 18);
             this.lblMail.TabIndex = 9;
@@ -98,7 +100,7 @@
             // 
             // txtTelefonoOS
             // 
-            this.txtTelefonoOS.Location = new System.Drawing.Point(420, 28);
+            this.txtTelefonoOS.Location = new System.Drawing.Point(427, 44);
             this.txtTelefonoOS.Name = "txtTelefonoOS";
             this.txtTelefonoOS.Size = new System.Drawing.Size(170, 20);
             this.txtTelefonoOS.TabIndex = 12;
@@ -108,30 +110,41 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(338, 29);
+            this.lblTelefono.Location = new System.Drawing.Point(345, 44);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(76, 18);
             this.lblTelefono.TabIndex = 11;
             this.lblTelefono.Text = "Telefono:";
             // 
+            // gbxAltaObraSocial
+            // 
+            this.gbxAltaObraSocial.Controls.Add(this.txtNombre);
+            this.gbxAltaObraSocial.Controls.Add(this.txtTelefonoOS);
+            this.gbxAltaObraSocial.Controls.Add(this.lblNombreOS);
+            this.gbxAltaObraSocial.Controls.Add(this.lblTelefono);
+            this.gbxAltaObraSocial.Controls.Add(this.lblMail);
+            this.gbxAltaObraSocial.Controls.Add(this.txtCorreoOS);
+            this.gbxAltaObraSocial.Location = new System.Drawing.Point(12, 12);
+            this.gbxAltaObraSocial.Name = "gbxAltaObraSocial";
+            this.gbxAltaObraSocial.Size = new System.Drawing.Size(603, 121);
+            this.gbxAltaObraSocial.TabIndex = 13;
+            this.gbxAltaObraSocial.TabStop = false;
+            this.gbxAltaObraSocial.Text = "Datos Obra Social";
+            // 
             // AltaObSocial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 132);
-            this.Controls.Add(this.txtTelefonoOS);
-            this.Controls.Add(this.lblTelefono);
-            this.Controls.Add(this.txtCorreoOS);
-            this.Controls.Add(this.lblMail);
-            this.Controls.Add(this.txtNombre);
+            this.ClientSize = new System.Drawing.Size(625, 173);
+            this.Controls.Add(this.gbxAltaObraSocial);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlta);
-            this.Controls.Add(this.lblNombreOS);
             this.Name = "AltaObSocial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaObSocial";
+            this.gbxAltaObraSocial.ResumeLayout(false);
+            this.gbxAltaObraSocial.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -145,5 +158,6 @@
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.TextBox txtTelefonoOS;
         private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.GroupBox gbxAltaObraSocial;
     }
 }

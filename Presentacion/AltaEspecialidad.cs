@@ -12,11 +12,19 @@ using Negocio;
 
 namespace Presentacion
 {
-    public partial class AltaEsecialidad : Form
+    public partial class AltaEspecialidad : Form
     {
-        public AltaEsecialidad()
+        public AltaEspecialidad()
         {
             InitializeComponent();
+        }
+
+        int ID;
+
+        public AltaEspecialidad(int ID)
+        {
+            InitializeComponent();
+            this.ID = ID;
         }
 
         private void btnAlta_Click(object sender, EventArgs e)
@@ -43,5 +51,23 @@ namespace Presentacion
         {
             Close();
         }
+
+        //private void btnModificar_Click(object sender, EventArgs e)
+        //{
+        //    DatosEspecialidad E = new DatosEspecialidad();
+        //    Especialidad ModificarEspecialidad = new Especialidad();
+
+        //    try
+        //    {
+        //        ModificarEspecialidad.DescEspecialidad = txtNombreEspecialidad.Text;
+        //        E.ModificarEspecialidad(ModificarEspecialidad);
+
+        //        Close();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.ToString());
+        //    }
+        //}
     }
 }

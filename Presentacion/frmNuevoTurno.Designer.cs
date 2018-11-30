@@ -247,7 +247,7 @@
             this.gbxDatosPaciente.Size = new System.Drawing.Size(1155, 165);
             this.gbxDatosPaciente.TabIndex = 20;
             this.gbxDatosPaciente.TabStop = false;
-            this.gbxDatosPaciente.Text = "Datos Paciente";
+            this.gbxDatosPaciente.Text = "Detalles del Turno";
             // 
             // textBox1
             // 

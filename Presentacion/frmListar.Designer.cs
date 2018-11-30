@@ -64,7 +64,7 @@
             this.tsbListarOS});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(32, 280);
+            this.toolStrip1.Size = new System.Drawing.Size(24, 280);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -74,7 +74,7 @@
             this.tsbBuscarDatosPaciente.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarDatosPaciente.Image")));
             this.tsbBuscarDatosPaciente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBuscarDatosPaciente.Name = "tsbBuscarDatosPaciente";
-            this.tsbBuscarDatosPaciente.Size = new System.Drawing.Size(29, 20);
+            this.tsbBuscarDatosPaciente.Size = new System.Drawing.Size(21, 20);
             this.tsbBuscarDatosPaciente.Text = "Datos del Paciente";
             this.tsbBuscarDatosPaciente.Click += new System.EventHandler(this.tsbBuscarDatosPaciente_Click);
             // 
@@ -84,7 +84,7 @@
             this.tsbVerEspecialidades.Image = ((System.Drawing.Image)(resources.GetObject("tsbVerEspecialidades.Image")));
             this.tsbVerEspecialidades.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbVerEspecialidades.Name = "tsbVerEspecialidades";
-            this.tsbVerEspecialidades.Size = new System.Drawing.Size(29, 20);
+            this.tsbVerEspecialidades.Size = new System.Drawing.Size(21, 20);
             this.tsbVerEspecialidades.Text = "Ver Especialidades";
             this.tsbVerEspecialidades.Click += new System.EventHandler(this.tsbVerEspecialidades_Click);
             // 
@@ -94,7 +94,7 @@
             this.tsbBuscarMedicos.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarMedicos.Image")));
             this.tsbBuscarMedicos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBuscarMedicos.Name = "tsbBuscarMedicos";
-            this.tsbBuscarMedicos.Size = new System.Drawing.Size(29, 20);
+            this.tsbBuscarMedicos.Size = new System.Drawing.Size(21, 20);
             this.tsbBuscarMedicos.Text = "Buscar Medico";
             this.tsbBuscarMedicos.Click += new System.EventHandler(this.tsbBuscarMedicos_Click);
             // 
@@ -104,7 +104,7 @@
             this.tsbListarOS.Image = ((System.Drawing.Image)(resources.GetObject("tsbListarOS.Image")));
             this.tsbListarOS.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbListarOS.Name = "tsbListarOS";
-            this.tsbListarOS.Size = new System.Drawing.Size(29, 20);
+            this.tsbListarOS.Size = new System.Drawing.Size(21, 20);
             this.tsbListarOS.Text = "Obras Sociales";
             this.tsbListarOS.Click += new System.EventHandler(this.tsbListarOS_Click);
             // 
@@ -118,6 +118,7 @@
             this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+           // this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -129,6 +130,7 @@
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmListar
             // 

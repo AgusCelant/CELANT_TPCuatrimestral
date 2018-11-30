@@ -129,7 +129,7 @@
             this.dgvDias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDias.Location = new System.Drawing.Point(771, 228);
             this.dgvDias.Name = "dgvDias";
-            this.dgvDias.Size = new System.Drawing.Size(253, 99);
+            this.dgvDias.Size = new System.Drawing.Size(270, 99);
             this.dgvDias.TabIndex = 7;
             // 
             // btnDias
@@ -157,7 +157,7 @@
             this.dgvHoras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoras.Location = new System.Drawing.Point(771, 333);
             this.dgvHoras.Name = "dgvHoras";
-            this.dgvHoras.Size = new System.Drawing.Size(253, 99);
+            this.dgvHoras.Size = new System.Drawing.Size(270, 99);
             this.dgvHoras.TabIndex = 10;
             // 
             // frmPlanillaMedicos

@@ -118,7 +118,11 @@ namespace Negocio
             try
             {
                 conexion = new AccesoDB();
-                conexion.setearConsulta("Delete from MEDICOS where IdMedico = @Id");
+                conexion.setearConsulta(@"DELETE FROM ESPECIALIDADxMEDICO WHERE IDMED IN(SELECT IDMED FROM MEDICOS WHERE IDMED = @Id)
+                                          DELETE FROM OSxMEDICO WHERE IDMED IN(SELECT IDMED FROM MEDICOS WHERE IDMED = @Id)
+                                          DELETE FROM DIASxMEDICO WHERE IDMED IN(SELECT IDMED FROM MEDICOS WHERE IDMED = @Id)
+                                          DELETE FROM HORASxDIAS WHERE IDMED IN(SELECT IDMED FROM MEDICOS WHERE IDMED = @Id)
+                                          DELETE FROM MEDICOS WHERE IDMEDICO = @Id");
                 conexion.Comando.Parameters.Clear();
                 conexion.Comando.Parameters.AddWithValue("@Id", id);
                 conexion.abrir();
@@ -153,5 +157,6 @@ namespace Negocio
                 throw ex;
             }
         }
+        
     }
 }

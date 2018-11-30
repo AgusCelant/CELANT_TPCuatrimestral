@@ -137,5 +137,25 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public void EliminarOS(int ID)
+        {
+            AccesoDB conexion = new AccesoDB();
+
+            try
+            {
+                conexion = new AccesoDB();
+                conexion.setearConsulta("DELETE FROM OBRASOCIAL WHERE IDOS = @ID");
+                conexion.Comando.Parameters.Clear();
+                conexion.Comando.Parameters.AddWithValue("@Id", ID);
+                conexion.abrir();
+                conexion.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

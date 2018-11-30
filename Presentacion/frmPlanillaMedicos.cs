@@ -63,7 +63,7 @@ namespace Presentacion
                 eliminar = (Medico)dgvPlanillaMedicos.CurrentRow.DataBoundItem;
                 negMedico.EliminarMedico(eliminar.IdMedico);
                 CargarPlanilla();
-                MessageBox.Show("Profesional Eliminado.");
+                MessageBox.Show("PROFESIONAL ELIMINADO CON EXITO.");
             }
             catch (Exception ex)
             {

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltaEsecialidad.cs">
+    <Compile Include="AltaEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaEsecialidad.Designer.cs">
-      <DependentUpon>AltaEsecialidad.cs</DependentUpon>
+    <Compile Include="AltaEspecialidad.Designer.cs">
+      <DependentUpon>AltaEspecialidad.cs</DependentUpon>
     </Compile>
     <Compile Include="AltaMedico.cs">
       <SubType>Form</SubType>
@@ -120,8 +120,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AltaEsecialidad.resx">
-      <DependentUpon>AltaEsecialidad.cs</DependentUpon>
+    <EmbeddedResource Include="AltaEspecialidad.resx">
+      <DependentUpon>AltaEspecialidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AltaMedico.resx">
       <DependentUpon>AltaMedico.cs</DependentUpon>

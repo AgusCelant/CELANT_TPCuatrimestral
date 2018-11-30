@@ -110,7 +110,7 @@ namespace Presentacion
             }
 
 
-            // reemplazar esta negrada con un select * from horasinit/horasend
+            // reemplazar esta NEGRADA con un select * from horasinit/horasend
 
             lstbxHoraEnntrada.Items.Add(0);
             lstbxHoraEnntrada.Items.Add(1);
