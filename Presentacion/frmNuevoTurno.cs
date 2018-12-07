@@ -22,39 +22,44 @@ namespace Presentacion
 
         private void frmNuevoTurno_Load(object sender, EventArgs e)
         {
-            AutocompletarNombre();
-            AutocompletarApellido();
+            //AutocompletarNombre();
+            //AutocompletarApellido();
             AutocompletarOS();
             AutocompletarEspecialidad();
             AutocompleteMedico();
+
+            
+
             CargarPlanilla();
 
         }
 
-        public void AutocompletarNombre()
+        public void AutocompletarNombre(int DNI)
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
-            IList<Paciente> lista = new List<Paciente>();
+           
 
             try
             {
                 conexion.ConnectionString = @"initial catalog=CLINICA; data source=DESKTOP-2IGJU5O\SQLEXPRESS; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT NOMBRE FROM PACIENTE ";
+                comando.CommandText = "SELECT NOMBRE FROM PACIENTE WHERE DOCUMENTO =" + DNI;
                 comando.Connection = conexion;
                 conexion.Open();
                 lector = comando.ExecuteReader();
 
-                AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
+                //AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
 
                 while (lector.Read())
                 {
-                    MiColeccion.Add(lector.GetString(0));
-                }
+                    txtNombre.Text = lector.GetString(0);
 
-                txtNombre.AutoCompleteCustomSource = MiColeccion;
+                    //MiColeccion.Add(lector.GetString(0));
+                }
+                
+                //txtNombre.AutoCompleteCustomSource = MiColeccion;
             }
             catch (Exception ex)
             {
@@ -63,7 +68,7 @@ namespace Presentacion
             }
         }
 
-        public void AutocompletarApellido()
+        public void AutocompletarApellido(int DNI)
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
@@ -74,19 +79,54 @@ namespace Presentacion
             {
                 conexion.ConnectionString = @"initial catalog=CLINICA; data source=DESKTOP-2IGJU5O\SQLEXPRESS; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT APELLIDO FROM PACIENTE ";
+                comando.CommandText = "SELECT APELLIDO FROM PACIENTE WHERE DOCUMENTO=" + DNI;
                 comando.Connection = conexion;
                 conexion.Open();
                 lector = comando.ExecuteReader();
 
-                AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
+                //AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
 
                 while (lector.Read())
                 {
-                    MiColeccion.Add(lector.GetString(0));
+                    txtApellido.Text = lector.GetString(0);
+                   // MiColeccion.Add(lector.GetString(0));
                 }
 
-                txtApellido.AutoCompleteCustomSource = MiColeccion;
+                //txtApellido.AutoCompleteCustomSource = MiColeccion;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void AutocompletarNroOS(int DNI)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            IList<Paciente> lista = new List<Paciente>();
+
+            try
+            {
+                conexion.ConnectionString = @"initial catalog=CLINICA; data source=DESKTOP-2IGJU5O\SQLEXPRESS; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT NROAFILIADO FROM PACIENTE WHERE DOCUMENTO=" + DNI;
+                comando.Connection = conexion;
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+               // AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
+
+                while (lector.Read())
+                {
+                    txtNroOS.Text = Convert.ToString((int)lector["NROAFILIADO"]);
+
+                    //MiColeccion.Add(lector.GetString(0));
+                }
+
+               // txtNroOS.AutoCompleteCustomSource = MiColeccion;
             }
             catch (Exception ex)
             {
@@ -284,6 +324,55 @@ namespace Presentacion
             }
 
         }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+         
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
         
+            try
+            {
+                conexion.ConnectionString = @"initial catalog=CLINICA; data source=DESKTOP-2IGJU5O\SQLEXPRESS; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = @"SELECT T.IDTURNO, T.FECHA, P.NOMBRE, P.APELLIDO, P.DOCUMENTO, P.NROAFILIADO, M.APELLIDO AS 'A.MEDICO', M.NOMBRE AS 'N.MEDICO',
+                E.DESCRIPCION AS 'ESPECIALIDAD', OS.NOMBRE AS 'OBRA SOCIAL', T.VALOR FROM TURNOS AS T
+                INNER JOIN PACIENTE AS P ON T.IDPACIENTE = P.IDPACIENTE
+                INNER JOIN MEDICOS AS M ON T.IDMEDICO = M.IDMEDICO
+                INNER JOIN ESPECIALIDADES AS E ON E.IDESPECIALIDAD = T.IDESPECIALIDAD
+                INNER JOIN OBRASOCIAL AS OS ON OS.IDOS = T.IDOBS 
+                WHERE P.DOCUMENTO LIKE('%"+ txtFiltrar.Text +"%')";
+                comando.Connection = conexion;
+                conexion.Open();
+                comando.ExecuteNonQuery();
+
+                DataTable DT = new DataTable();
+                SqlDataAdapter DA = new SqlDataAdapter(comando);
+
+                DA.Fill(DT);
+
+                dgvListaTurnos.DataSource = DT;
+
+                conexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnCompletarDatos_Click(object sender, EventArgs e)
+        {
+            AutocompletarNombre(int.Parse(txtDNI.Text));
+            AutocompletarApellido(int.Parse(txtDNI.Text));
+            AutocompletarNroOS(int.Parse(txtDNI.Text));
+            
+            
+
+
+            
+        }
     }
 }

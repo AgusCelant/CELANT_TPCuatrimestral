@@ -44,8 +44,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvListaTurnos = new System.Windows.Forms.DataGridView();
             this.gbxDatosPaciente = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblContadorDeTurnos = new System.Windows.Forms.Label();
             this.cboHorarios = new System.Windows.Forms.ComboBox();
             this.lblHorario = new System.Windows.Forms.Label();
             this.txtValorConsulta = new System.Windows.Forms.TextBox();
@@ -57,6 +55,7 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
+            this.btnCompletarDatos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaTurnos)).BeginInit();
             this.gbxDatosPaciente.SuspendLayout();
             this.SuspendLayout();
@@ -162,6 +161,8 @@
             // 
             // txtNroOS
             // 
+            this.txtNroOS.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtNroOS.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtNroOS.Location = new System.Drawing.Point(147, 69);
             this.txtNroOS.Name = "txtNroOS";
             this.txtNroOS.Size = new System.Drawing.Size(139, 20);
@@ -173,7 +174,7 @@
             this.lblFechaNac.BackColor = System.Drawing.SystemColors.Menu;
             this.lblFechaNac.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNac.Location = new System.Drawing.Point(593, 37);
+            this.lblFechaNac.Location = new System.Drawing.Point(669, 16);
             this.lblFechaNac.Name = "lblFechaNac";
             this.lblFechaNac.Size = new System.Drawing.Size(127, 18);
             this.lblFechaNac.TabIndex = 15;
@@ -181,7 +182,7 @@
             // 
             // dtpFehaTurno
             // 
-            this.dtpFehaTurno.Location = new System.Drawing.Point(593, 58);
+            this.dtpFehaTurno.Location = new System.Drawing.Point(669, 37);
             this.dtpFehaTurno.Name = "dtpFehaTurno";
             this.dtpFehaTurno.Size = new System.Drawing.Size(200, 20);
             this.dtpFehaTurno.TabIndex = 16;
@@ -217,8 +218,7 @@
             // 
             // gbxDatosPaciente
             // 
-            this.gbxDatosPaciente.Controls.Add(this.textBox1);
-            this.gbxDatosPaciente.Controls.Add(this.lblContadorDeTurnos);
+            this.gbxDatosPaciente.Controls.Add(this.btnCompletarDatos);
             this.gbxDatosPaciente.Controls.Add(this.cboHorarios);
             this.gbxDatosPaciente.Controls.Add(this.lblHorario);
             this.gbxDatosPaciente.Controls.Add(this.txtValorConsulta);
@@ -249,30 +249,10 @@
             this.gbxDatosPaciente.TabStop = false;
             this.gbxDatosPaciente.Text = "Detalles del Turno";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(1040, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(91, 20);
-            this.textBox1.TabIndex = 28;
-            // 
-            // lblContadorDeTurnos
-            // 
-            this.lblContadorDeTurnos.AutoSize = true;
-            this.lblContadorDeTurnos.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblContadorDeTurnos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblContadorDeTurnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContadorDeTurnos.ForeColor = System.Drawing.Color.Red;
-            this.lblContadorDeTurnos.Location = new System.Drawing.Point(769, 16);
-            this.lblContadorDeTurnos.Name = "lblContadorDeTurnos";
-            this.lblContadorDeTurnos.Size = new System.Drawing.Size(265, 18);
-            this.lblContadorDeTurnos.TabIndex = 27;
-            this.lblContadorDeTurnos.Text = "Cant.Turnos restantes para la Fecha:";
-            // 
             // cboHorarios
             // 
             this.cboHorarios.FormattingEnabled = true;
-            this.cboHorarios.Location = new System.Drawing.Point(593, 108);
+            this.cboHorarios.Location = new System.Drawing.Point(669, 87);
             this.cboHorarios.Name = "cboHorarios";
             this.cboHorarios.Size = new System.Drawing.Size(121, 21);
             this.cboHorarios.TabIndex = 26;
@@ -283,7 +263,7 @@
             this.lblHorario.BackColor = System.Drawing.SystemColors.Menu;
             this.lblHorario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorario.Location = new System.Drawing.Point(593, 87);
+            this.lblHorario.Location = new System.Drawing.Point(669, 66);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(66, 18);
             this.lblHorario.TabIndex = 25;
@@ -291,7 +271,7 @@
             // 
             // txtValorConsulta
             // 
-            this.txtValorConsulta.Location = new System.Drawing.Point(1040, 40);
+            this.txtValorConsulta.Location = new System.Drawing.Point(1058, 19);
             this.txtValorConsulta.Name = "txtValorConsulta";
             this.txtValorConsulta.Size = new System.Drawing.Size(91, 20);
             this.txtValorConsulta.TabIndex = 24;
@@ -303,7 +283,7 @@
             this.lblValorConsulta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblValorConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValorConsulta.ForeColor = System.Drawing.Color.Red;
-            this.lblValorConsulta.Location = new System.Drawing.Point(880, 41);
+            this.lblValorConsulta.Location = new System.Drawing.Point(898, 20);
             this.lblValorConsulta.Name = "lblValorConsulta";
             this.lblValorConsulta.Size = new System.Drawing.Size(154, 18);
             this.lblValorConsulta.TabIndex = 23;
@@ -359,11 +339,15 @@
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(168, 34);
             this.btnFiltrar.TabIndex = 29;
-            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.Text = "Buscar";
             this.btnFiltrar.UseVisualStyleBackColor = false;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // txtFiltrar
             // 
+            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltrar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtFiltrar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtFiltrar.Location = new System.Drawing.Point(155, 563);
@@ -373,15 +357,28 @@
             // 
             // lblFiltrar
             // 
+            this.lblFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFiltrar.AutoSize = true;
             this.lblFiltrar.BackColor = System.Drawing.SystemColors.Menu;
             this.lblFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrar.Location = new System.Drawing.Point(84, 565);
+            this.lblFiltrar.Location = new System.Drawing.Point(30, 565);
             this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(62, 18);
+            this.lblFiltrar.Size = new System.Drawing.Size(119, 18);
             this.lblFiltrar.TabIndex = 29;
-            this.lblFiltrar.Text = "Buscar:";
+            this.lblFiltrar.Text = "Buscar por DNI:";
+            // 
+            // btnCompletarDatos
+            // 
+            this.btnCompletarDatos.Location = new System.Drawing.Point(552, 18);
+            this.btnCompletarDatos.Name = "btnCompletarDatos";
+            this.btnCompletarDatos.Size = new System.Drawing.Size(75, 39);
+            this.btnCompletarDatos.TabIndex = 27;
+            this.btnCompletarDatos.Text = "Completar datos";
+            this.btnCompletarDatos.UseVisualStyleBackColor = true;
+            this.btnCompletarDatos.Click += new System.EventHandler(this.btnCompletarDatos_Click);
             // 
             // frmNuevoTurno
             // 
@@ -429,12 +426,11 @@
         private System.Windows.Forms.Label lblValorConsulta;
         private System.Windows.Forms.TextBox txtMedico;
         private System.Windows.Forms.Label lblMedico;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblContadorDeTurnos;
         private System.Windows.Forms.ComboBox cboHorarios;
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.Label lblFiltrar;
+        private System.Windows.Forms.Button btnCompletarDatos;
     }
 }
