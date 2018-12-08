@@ -22,16 +22,8 @@ namespace Presentacion
 
         private void frmNuevoTurno_Load(object sender, EventArgs e)
         {
-            //AutocompletarNombre();
-            //AutocompletarApellido();
-            AutocompletarOS();
-            AutocompletarEspecialidad();
             AutocompleteMedico();
-
-            
-
             CargarPlanilla();
-
         }
 
         public void AutocompletarNombre(int DNI)
@@ -135,7 +127,7 @@ namespace Presentacion
             }
         }
 
-        public void AutocompletarOS()
+        public void AutocompletarOS(int DNI)
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
@@ -146,51 +138,21 @@ namespace Presentacion
             {
                 conexion.ConnectionString = @"initial catalog=CLINICA; data source=DESKTOP-2IGJU5O\SQLEXPRESS; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT NOMBRE FROM OBRASOCIAL ";
+                comando.CommandText = "SELECT OS.NOMBRE FROM PACIENTE AS P, OBRASOCIAL AS OS WHERE P.DOCUMENTO=" + DNI +
+                    " AND P.IDOBSOCIAL = OS.IDOS";
                 comando.Connection = conexion;
                 conexion.Open();
                 lector = comando.ExecuteReader();
 
-                AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
+                //AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
 
                 while (lector.Read())
                 {
-                    MiColeccion.Add(lector.GetString(0));
+                    txtOBSocial.Text = lector.GetString(0);
+                    //MiColeccion.Add(lector.GetString(0));
                 }
 
-               txtOBSocial.AutoCompleteCustomSource = MiColeccion;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-        }
-
-        public void AutocompletarEspecialidad()
-        {
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
-            IList<Especialidad> lista = new List<Especialidad>();
-
-            try
-            {
-                conexion.ConnectionString = @"initial catalog=CLINICA; data source=DESKTOP-2IGJU5O\SQLEXPRESS; integrated security=sspi";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT DESCRIPCION FROM ESPECIALIDADES ";
-                comando.Connection = conexion;
-                conexion.Open();
-                lector = comando.ExecuteReader();
-
-                AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
-
-                while (lector.Read())
-                {
-                    MiColeccion.Add(lector.GetString(0));
-                }
-
-                txtEspecialidad.AutoCompleteCustomSource = MiColeccion;
+               //txtOBSocial.AutoCompleteCustomSource = MiColeccion;
             }
             catch (Exception ex)
             {
@@ -234,7 +196,89 @@ namespace Presentacion
                 throw ex;
             }
         }
-        
+
+        public void AutocompletarEspecialidad(string Nmatricula)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            IList<Especialidad> lista = new List<Especialidad>();
+
+            try
+            {
+                conexion.ConnectionString = @"initial catalog=CLINICA; data source=DESKTOP-2IGJU5O\SQLEXPRESS; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT E.DESCRIPCION FROM MEDICOS AS M " +
+                    "INNER JOIN ESPECIALIDADxMEDICO AS EM ON M.IDMEDICO = EM.IDMED" +
+                    " INNER JOIN ESPECIALIDADES AS E ON EM.IDESP = E.IDESPECIALIDAD " +
+                    "WHERE M.NMATRICULA =" + Nmatricula;
+
+                comando.Connection = conexion;
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+                //AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
+
+                while (lector.Read())
+                {
+                    //MiColeccion.Add(lector.GetString(0));
+                    cboEspecialidades.Items.Add(lector.GetString(0));
+                }
+
+               // txtEspecialidad.AutoCompleteCustomSource = MiColeccion;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void AutocompletarDiasHoras(string Nmatricula)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            IList<Especialidad> lista = new List<Especialidad>();
+
+            try
+            {
+                conexion.ConnectionString = @"initial catalog=CLINICA; data source=DESKTOP-2IGJU5O\SQLEXPRESS; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT D.DIA, HI.HORAINICIO, HE.HORAFIN FROM MEDICOS AS M " +
+                    "INNER JOIN DIASxMEDICO AS DM ON M.IDMEDICO = DM.IDMED " +
+                    "INNER JOIN HORASxDIAS AS HD ON DM.IDDIA = HD.IDDIA " +
+                    "INNER JOIN DIAS AS D ON D.IDDIA = DM.IDDIA " +
+                    "INNER JOIN HORASINIT AS HI ON HI.IDHORAINICIO = HD.IDHORAINICIO " +
+                    "INNER JOIN HORASEND AS HE ON HE.IDHORAFIN = HD.IDHORAFIN " +
+                    "WHERE M.NMATRICULA= " + Nmatricula;
+
+                comando.Connection = conexion;
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+                //AutoCompleteStringCollection MiColeccion = new AutoCompleteStringCollection();
+
+                while (lector.Read())
+                {
+                    //MiColeccion.Add(lector.GetString(0));
+                    string DiasHoras = "";
+
+                    DiasHoras = lector.GetString(0) + " - " + (int)lector["HORAINICIO"] + "/" + (int)lector["HORAFIN"];
+
+                    cboHorarios.Items.Add(DiasHoras);
+                    
+                }
+
+                // txtEspecialidad.AutoCompleteCustomSource = MiColeccion;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
@@ -252,7 +296,7 @@ namespace Presentacion
             int IDEspecialidad;
 
             DatosEspecialidad DE = new DatosEspecialidad();
-            BuscarEspecialidad = txtEspecialidad.Text.ToString();
+            BuscarEspecialidad = cboEspecialidades.SelectedItem.ToString();
             IDEspecialidad = DE.BuscarIDEspecialidad(BuscarEspecialidad);
 
             string BuscarOS;
@@ -288,7 +332,8 @@ namespace Presentacion
                 DT.AltaTurno(T);
 
                 MessageBox.Show("Turno Agregado Correctamente");
-                
+
+                CargarPlanilla();
             }
             catch (Exception ex)
             {
@@ -368,11 +413,16 @@ namespace Presentacion
             AutocompletarNombre(int.Parse(txtDNI.Text));
             AutocompletarApellido(int.Parse(txtDNI.Text));
             AutocompletarNroOS(int.Parse(txtDNI.Text));
-            
-            
+            AutocompletarOS(int.Parse(txtDNI.Text));
+        }
 
-
-            
+        private void btnCompletarMedico_Click(object sender, EventArgs e)
+        {
+            string resultado;
+            resultado = txtMedico.Text.Split(',').Last();
+        
+            AutocompletarEspecialidad(resultado);
+            AutocompletarDiasHoras(resultado);
         }
     }
 }

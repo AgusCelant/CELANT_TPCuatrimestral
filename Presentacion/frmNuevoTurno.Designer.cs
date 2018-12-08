@@ -44,18 +44,19 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvListaTurnos = new System.Windows.Forms.DataGridView();
             this.gbxDatosPaciente = new System.Windows.Forms.GroupBox();
+            this.btnCompletarDatos = new System.Windows.Forms.Button();
             this.cboHorarios = new System.Windows.Forms.ComboBox();
             this.lblHorario = new System.Windows.Forms.Label();
             this.txtValorConsulta = new System.Windows.Forms.TextBox();
             this.lblValorConsulta = new System.Windows.Forms.Label();
             this.txtMedico = new System.Windows.Forms.TextBox();
             this.lblMedico = new System.Windows.Forms.Label();
-            this.txtEspecialidad = new System.Windows.Forms.TextBox();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
-            this.btnCompletarDatos = new System.Windows.Forms.Button();
+            this.btnCompletarMedico = new System.Windows.Forms.Button();
+            this.cboEspecialidades = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaTurnos)).BeginInit();
             this.gbxDatosPaciente.SuspendLayout();
             this.SuspendLayout();
@@ -89,9 +90,11 @@
             this.txtNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(106, 17);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(180, 20);
+            this.txtNombre.Size = new System.Drawing.Size(180, 22);
             this.txtNombre.TabIndex = 4;
             // 
             // label1
@@ -112,7 +115,7 @@
             this.lblDNI.BackColor = System.Drawing.SystemColors.Menu;
             this.lblDNI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDNI.Location = new System.Drawing.Point(320, 17);
+            this.lblDNI.Location = new System.Drawing.Point(292, 19);
             this.lblDNI.Name = "lblDNI";
             this.lblDNI.Size = new System.Drawing.Size(40, 18);
             this.lblDNI.TabIndex = 7;
@@ -136,7 +139,7 @@
             this.lblNombreObraSocial.BackColor = System.Drawing.SystemColors.Menu;
             this.lblNombreObraSocial.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblNombreObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreObraSocial.Location = new System.Drawing.Point(320, 69);
+            this.lblNombreObraSocial.Location = new System.Drawing.Point(292, 71);
             this.lblNombreObraSocial.Name = "lblNombreObraSocial";
             this.lblNombreObraSocial.Size = new System.Drawing.Size(96, 18);
             this.lblNombreObraSocial.TabIndex = 9;
@@ -144,7 +147,7 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(366, 18);
+            this.txtDNI.Location = new System.Drawing.Point(338, 20);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(180, 20);
             this.txtDNI.TabIndex = 10;
@@ -154,18 +157,23 @@
             this.txtApellido.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtApellido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellido.Enabled = false;
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(106, 43);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(180, 20);
+            this.txtApellido.Size = new System.Drawing.Size(180, 22);
             this.txtApellido.TabIndex = 11;
             // 
             // txtNroOS
             // 
             this.txtNroOS.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtNroOS.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtNroOS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNroOS.Enabled = false;
+            this.txtNroOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNroOS.Location = new System.Drawing.Point(147, 69);
             this.txtNroOS.Name = "txtNroOS";
-            this.txtNroOS.Size = new System.Drawing.Size(139, 20);
+            this.txtNroOS.Size = new System.Drawing.Size(139, 22);
             this.txtNroOS.TabIndex = 14;
             // 
             // lblFechaNac
@@ -174,7 +182,7 @@
             this.lblFechaNac.BackColor = System.Drawing.SystemColors.Menu;
             this.lblFechaNac.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNac.Location = new System.Drawing.Point(669, 16);
+            this.lblFechaNac.Location = new System.Drawing.Point(645, 16);
             this.lblFechaNac.Name = "lblFechaNac";
             this.lblFechaNac.Size = new System.Drawing.Size(127, 18);
             this.lblFechaNac.TabIndex = 15;
@@ -182,7 +190,7 @@
             // 
             // dtpFehaTurno
             // 
-            this.dtpFehaTurno.Location = new System.Drawing.Point(669, 37);
+            this.dtpFehaTurno.Location = new System.Drawing.Point(645, 37);
             this.dtpFehaTurno.Name = "dtpFehaTurno";
             this.dtpFehaTurno.Size = new System.Drawing.Size(200, 20);
             this.dtpFehaTurno.TabIndex = 16;
@@ -191,9 +199,13 @@
             // 
             this.txtOBSocial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtOBSocial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtOBSocial.Location = new System.Drawing.Point(423, 66);
+            this.txtOBSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtOBSocial.Enabled = false;
+            this.txtOBSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOBSocial.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtOBSocial.Location = new System.Drawing.Point(395, 68);
             this.txtOBSocial.Name = "txtOBSocial";
-            this.txtOBSocial.Size = new System.Drawing.Size(123, 20);
+            this.txtOBSocial.Size = new System.Drawing.Size(123, 22);
             this.txtOBSocial.TabIndex = 17;
             // 
             // btnCancelar
@@ -218,6 +230,8 @@
             // 
             // gbxDatosPaciente
             // 
+            this.gbxDatosPaciente.Controls.Add(this.cboEspecialidades);
+            this.gbxDatosPaciente.Controls.Add(this.btnCompletarMedico);
             this.gbxDatosPaciente.Controls.Add(this.btnCompletarDatos);
             this.gbxDatosPaciente.Controls.Add(this.cboHorarios);
             this.gbxDatosPaciente.Controls.Add(this.lblHorario);
@@ -225,7 +239,6 @@
             this.gbxDatosPaciente.Controls.Add(this.lblValorConsulta);
             this.gbxDatosPaciente.Controls.Add(this.txtMedico);
             this.gbxDatosPaciente.Controls.Add(this.lblMedico);
-            this.gbxDatosPaciente.Controls.Add(this.txtEspecialidad);
             this.gbxDatosPaciente.Controls.Add(this.lblEspecialidad);
             this.gbxDatosPaciente.Controls.Add(this.txtDNI);
             this.gbxDatosPaciente.Controls.Add(this.label1);
@@ -249,10 +262,21 @@
             this.gbxDatosPaciente.TabStop = false;
             this.gbxDatosPaciente.Text = "Detalles del Turno";
             // 
+            // btnCompletarDatos
+            // 
+            this.btnCompletarDatos.Location = new System.Drawing.Point(524, 10);
+            this.btnCompletarDatos.Name = "btnCompletarDatos";
+            this.btnCompletarDatos.Size = new System.Drawing.Size(75, 39);
+            this.btnCompletarDatos.TabIndex = 27;
+            this.btnCompletarDatos.Text = "Completar Paciente";
+            this.btnCompletarDatos.UseVisualStyleBackColor = true;
+            this.btnCompletarDatos.Click += new System.EventHandler(this.btnCompletarDatos_Click);
+            // 
             // cboHorarios
             // 
+            this.cboHorarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboHorarios.FormattingEnabled = true;
-            this.cboHorarios.Location = new System.Drawing.Point(669, 87);
+            this.cboHorarios.Location = new System.Drawing.Point(645, 81);
             this.cboHorarios.Name = "cboHorarios";
             this.cboHorarios.Size = new System.Drawing.Size(121, 21);
             this.cboHorarios.TabIndex = 26;
@@ -263,7 +287,7 @@
             this.lblHorario.BackColor = System.Drawing.SystemColors.Menu;
             this.lblHorario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorario.Location = new System.Drawing.Point(669, 66);
+            this.lblHorario.Location = new System.Drawing.Point(645, 60);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(66, 18);
             this.lblHorario.TabIndex = 25;
@@ -271,7 +295,7 @@
             // 
             // txtValorConsulta
             // 
-            this.txtValorConsulta.Location = new System.Drawing.Point(1058, 19);
+            this.txtValorConsulta.Location = new System.Drawing.Point(963, 37);
             this.txtValorConsulta.Name = "txtValorConsulta";
             this.txtValorConsulta.Size = new System.Drawing.Size(91, 20);
             this.txtValorConsulta.TabIndex = 24;
@@ -283,7 +307,7 @@
             this.lblValorConsulta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblValorConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValorConsulta.ForeColor = System.Drawing.Color.Red;
-            this.lblValorConsulta.Location = new System.Drawing.Point(898, 20);
+            this.lblValorConsulta.Location = new System.Drawing.Point(934, 16);
             this.lblValorConsulta.Name = "lblValorConsulta";
             this.lblValorConsulta.Size = new System.Drawing.Size(154, 18);
             this.lblValorConsulta.TabIndex = 23;
@@ -309,15 +333,6 @@
             this.lblMedico.Size = new System.Drawing.Size(65, 18);
             this.lblMedico.TabIndex = 21;
             this.lblMedico.Text = "Medico:";
-            // 
-            // txtEspecialidad
-            // 
-            this.txtEspecialidad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtEspecialidad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtEspecialidad.Location = new System.Drawing.Point(147, 111);
-            this.txtEspecialidad.Name = "txtEspecialidad";
-            this.txtEspecialidad.Size = new System.Drawing.Size(123, 20);
-            this.txtEspecialidad.TabIndex = 20;
             // 
             // lblEspecialidad
             // 
@@ -370,15 +385,24 @@
             this.lblFiltrar.TabIndex = 29;
             this.lblFiltrar.Text = "Buscar por DNI:";
             // 
-            // btnCompletarDatos
+            // btnCompletarMedico
             // 
-            this.btnCompletarDatos.Location = new System.Drawing.Point(552, 18);
-            this.btnCompletarDatos.Name = "btnCompletarDatos";
-            this.btnCompletarDatos.Size = new System.Drawing.Size(75, 39);
-            this.btnCompletarDatos.TabIndex = 27;
-            this.btnCompletarDatos.Text = "Completar datos";
-            this.btnCompletarDatos.UseVisualStyleBackColor = true;
-            this.btnCompletarDatos.Click += new System.EventHandler(this.btnCompletarDatos_Click);
+            this.btnCompletarMedico.Location = new System.Drawing.Point(552, 99);
+            this.btnCompletarMedico.Name = "btnCompletarMedico";
+            this.btnCompletarMedico.Size = new System.Drawing.Size(75, 39);
+            this.btnCompletarMedico.TabIndex = 28;
+            this.btnCompletarMedico.Text = "Completar Medico";
+            this.btnCompletarMedico.UseVisualStyleBackColor = true;
+            this.btnCompletarMedico.Click += new System.EventHandler(this.btnCompletarMedico_Click);
+            // 
+            // cboEspecialidades
+            // 
+            this.cboEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEspecialidades.FormattingEnabled = true;
+            this.cboEspecialidades.Location = new System.Drawing.Point(147, 110);
+            this.cboEspecialidades.Name = "cboEspecialidades";
+            this.cboEspecialidades.Size = new System.Drawing.Size(121, 21);
+            this.cboEspecialidades.TabIndex = 29;
             // 
             // frmNuevoTurno
             // 
@@ -420,7 +444,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dgvListaTurnos;
         private System.Windows.Forms.GroupBox gbxDatosPaciente;
-        private System.Windows.Forms.TextBox txtEspecialidad;
         private System.Windows.Forms.Label lblEspecialidad;
         private System.Windows.Forms.TextBox txtValorConsulta;
         private System.Windows.Forms.Label lblValorConsulta;
@@ -432,5 +455,7 @@
         private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.Button btnCompletarDatos;
+        private System.Windows.Forms.Button btnCompletarMedico;
+        private System.Windows.Forms.ComboBox cboEspecialidades;
     }
 }
