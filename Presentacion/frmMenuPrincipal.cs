@@ -21,7 +21,7 @@ namespace Presentacion
         {
 
             frmNuevoTurno turno = new frmNuevoTurno();
-            turno.MdiParent = this;            // COMO HACER QUE SE ABRA SOLO UNA VENTANA EN EL ESPACOP DEL MENU RPINCIPAL
+            turno.MdiParent = this;            
             turno.Show();
                      
         }
@@ -73,6 +73,11 @@ namespace Presentacion
             AltaEspecialidad Alta = new AltaEspecialidad();
             Alta.MdiParent = this;
             Alta.Show();
+        }
+        
+        private void tsbSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -38,6 +38,7 @@
             this.zToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.especialidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +79,8 @@
             this.tsbNuevoTurno,
             this.tsbModificarTurnos,
             this.tsbBuscar,
-            this.tsddbAltas});
+            this.tsddbAltas,
+            this.tsbSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(32, 450);
@@ -128,6 +130,16 @@
             this.especialidadesToolStripMenuItem.Text = "Especialidades";
             this.especialidadesToolStripMenuItem.Click += new System.EventHandler(this.especialidadesToolStripMenuItem_Click);
             // 
+            // tsbSalir
+            // 
+            this.tsbSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSalir.Image = ((System.Drawing.Image)(resources.GetObject("tsbSalir.Image")));
+            this.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSalir.Name = "tsbSalir";
+            this.tsbSalir.Size = new System.Drawing.Size(29, 20);
+            this.tsbSalir.Text = "SALIR";
+            this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +168,7 @@
         private System.Windows.Forms.ToolStripMenuItem zToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem especialidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tsbSalir;
     }
 }
 

@@ -118,6 +118,18 @@
     <Compile Include="frmPlanillaPaciente.Designer.cs">
       <DependentUpon>frmPlanillaPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPlanillaTurnosDelMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanillaTurnosDelMedico.Designer.cs">
+      <DependentUpon>frmPlanillaTurnosDelMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AltaEspecialidad.resx">
@@ -155,6 +167,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlanillaPaciente.resx">
       <DependentUpon>frmPlanillaPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlanillaTurnosDelMedico.resx">
+      <DependentUpon>frmPlanillaTurnosDelMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

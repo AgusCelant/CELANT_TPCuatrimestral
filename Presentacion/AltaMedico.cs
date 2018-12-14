@@ -72,7 +72,20 @@ namespace Presentacion
                 {
                     DH.AltaHorasXDias((TurnoHorario)item,nuevoMedico);
                 }
-               
+
+                DatosUsuario DU = new DatosUsuario();
+                try
+                {
+                    DU.AltaUsuario(nuevoMedico);
+                    MessageBox.Show("NUEVO USUARIO CARGADO." +
+                        "\n USUARIO:" + nuevoMedico.Apellido.ToString() + ", CONTRASEÑA:" + nuevoMedico.Nmatricula);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+
                 Close();
 
                 MessageBox.Show("Profesional Cargado.");
